@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans scroll-smooth">
       
-      {/* 1. PROFESSIONAL HEADER / NAVIGATION */}
+      {/* 1. PROFESSIONAL HEADER / NAVIGATION (1.5x SIZE & FIXED ALIGNMENT) */}
       <header className="bg-white border-b sticky top-0 z-50 shadow-sm backdrop-blur-md bg-white/95">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           
@@ -360,4 +360,49 @@ export default function Home() {
 
       {/* 8. FOOTER */}
       <footer className="bg-gray-950 text-gray-400 py-16 px-6">
-        <div className="container mx
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-sm leading-relaxed">
+          <div className="col-span-2 md:col-span-1">
+            <span className="text-2xl font-bold text-white tracking-tight">DITC</span>
+            <p className="mt-4 text-gray-400">
+              Door #1, Adframe Building, Buhangin, Davao City, 8000 Davao del Sur, Philippines. (c) 2026 Davao International Transport Cooperative. All rights reserved. LTO Accredited.
+            </p>
+          </div>
+          <div>
+            <h5 className="font-semibold text-white mb-4 uppercase tracking-wider text-xs">Contact DITC</h5>
+            <div className="space-y-2">
+              <p>Hotline: 0912 345 6789 (Globe/Smart)</p>
+              <p>Office: (082) 2XX XXXX</p>
+              <p>info@ditc.coop</p>
+            </div>
+          </div>
+          <div>
+            <h5 className="font-semibold text-white mb-4 uppercase tracking-wider text-xs">Rental Rules</h5>
+            <div className="space-y-2">
+              <p>Full Fuel Policy</p>
+              <p>Minor Damage Waiver</p>
+              <p>Davao City Access Rules</p>
+            </div>
+          </div>
+          <div>
+            <h5 className="font-semibold text-white mb-4 uppercase tracking-wider text-xs">Cooperatives</h5>
+            <div className="space-y-2">
+              <p>About DITC Coop</p>
+              <p>Transparency Seal</p>
+              <p>Members Login</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* RESPONSIVE FLOATING 24/7 CHAT SUPPORT BUTTON */}
+      <button 
+        aria-label="Open 24/7 Chat Support"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-gradient-to-r from-[#166534] to-[#14532d] text-white p-4 sm:px-6 sm:py-4 rounded-full shadow-[0_10px_25px_rgba(22,101,52,0.4)] sm:text-lg font-bold hover:scale-105 active:scale-95 transition-all z-50 flex items-center justify-center gap-0 sm:gap-3 animate-bounce cursor-pointer border-2 border-white"
+      >
+        <span className="text-2xl drop-shadow-md">💬</span>
+        <span className="hidden sm:inline tracking-wide">24/7 Chat Support</span>
+      </button>
+      
+    </div>
+  );
+}
