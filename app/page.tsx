@@ -206,7 +206,7 @@ export default function Home() {
               <h3 className="text-xl font-bold text-gray-950 mb-1 tracking-tight">Bonie Galvez</h3>
               <p className="text-sm text-[#166534] font-semibold mb-4 tracking-wide uppercase group-hover:text-[#1d4ed8] transition-colors">Mindanao Route Specialist</p>
               <p className="text-gray-600 text-sm text-center leading-relaxed max-w-sm mb-6 flex-grow">
-                With over 10 years of accident-free professional driving across Mindanao, Bonie is known for meticulous route knowledge and exceptional passenger safety.
+                With over 30 years of accident-free professional driving across Mindanao, Bonie is known for meticulous route knowledge and exceptional passenger safety.
               </p>
               <a 
                 href="https://m.me/MANNY_USERNAME_HERE" 
