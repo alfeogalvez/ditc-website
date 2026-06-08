@@ -116,7 +116,7 @@ export default function Home() {
                 <h4 className="text-xl font-bold text-gray-950 tracking-tight">Grandia Tourer</h4>
                 <p className="text-sm text-gray-500 mb-5">Fits 12 Guests + 4 Bags</p>
                 <div className="flex justify-between items-end gap-3">
-                  <span className="text-2xl font-bold text-[#166534]">₱5,XXX / day</span>
+                  <span className="text-2xl font-bold text-[#166534]">₱5,000 / day</span>
                   <button className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">View Details</button>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function Home() {
                 <h4 className="text-xl font-bold text-gray-950 tracking-tight">Toyota Fortuner</h4>
                 <p className="text-sm text-gray-500 mb-5">Fits 7 Guests + 2 Bags</p>
                 <div className="flex justify-between items-end gap-3">
-                  <span className="text-2xl font-bold text-[#166534]">₱4,XXX / day</span>
+                  <span className="text-2xl font-bold text-[#166534]">₱4,000 / day</span>
                   <button className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">View Details</button>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function Home() {
                 <h4 className="text-xl font-bold text-gray-950 tracking-tight">Toyota Vios</h4>
                 <p className="text-sm text-gray-500 mb-5">Fits 4 Guests + 2 Bags</p>
                 <div className="flex justify-between items-end gap-3">
-                  <span className="text-2xl font-bold text-[#166534]">₱2,XXX / day</span>
+                  <span className="text-2xl font-bold text-[#166534]">₱2,000/ day</span>
                   <button className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">View Details</button>
                 </div>
               </div>
