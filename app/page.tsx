@@ -28,10 +28,11 @@ export default function Home() {
             
             {/* Stylized Company Typography */}
             <div className="flex flex-col justify-center min-w-0">
-              <span className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#166534] to-[#1d4ed8] tracking-tighter drop-shadow-sm leading-none truncate">
+              <span className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#166534] to-[#1d4ed8] tracking-tighter drop-shadow-sm leading-none">
                 DITC
               </span>
-              <span className="text-[8px] sm:text-[11px] lg:text-xs font-bold text-gray-500 uppercase tracking-widest mt-0.5 sm:mt-1 truncate max-w-[140px] sm:max-w-[250px] leading-tight">
+              {/* REMOVED 'truncate' SO IT WRAPS NEATLY ON MOBILE */}
+              <span className="text-[8px] sm:text-[11px] lg:text-xs font-bold text-gray-500 uppercase tracking-widest mt-0.5 sm:mt-1 max-w-[150px] sm:max-w-[250px] leading-snug">
                 Davao International Transport Cooperative
               </span>
             </div>
@@ -148,7 +149,7 @@ export default function Home() {
                 <h4 className="text-xl font-bold text-gray-950 tracking-tight">Grandia Tourer</h4>
                 <p className="text-sm text-gray-500 mb-5">Fits 12 Guests + 4 Bags</p>
                 <div className="flex justify-between items-end gap-3">
-                  <span className="text-2xl font-bold text-[#166534]">₱5,XXX / day</span>
+                  <span className="text-2xl font-bold text-[#166534]">₱5,000 / day</span>
                   <button className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">View Details</button>
                 </div>
               </div>
@@ -163,7 +164,7 @@ export default function Home() {
                 <h4 className="text-xl font-bold text-gray-950 tracking-tight">Toyota Fortuner</h4>
                 <p className="text-sm text-gray-500 mb-5">Fits 7 Guests + 2 Bags</p>
                 <div className="flex justify-between items-end gap-3">
-                  <span className="text-2xl font-bold text-[#166534]">₱4,XXX / day</span>
+                  <span className="text-2xl font-bold text-[#166534]">₱4,000 / day</span>
                   <button className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">View Details</button>
                 </div>
               </div>
@@ -178,7 +179,7 @@ export default function Home() {
                 <h4 className="text-xl font-bold text-gray-950 tracking-tight">Toyota Vios</h4>
                 <p className="text-sm text-gray-500 mb-5">Fits 4 Guests + 2 Bags</p>
                 <div className="flex justify-between items-end gap-3">
-                  <span className="text-2xl font-bold text-[#166534]">₱2,XXX / day</span>
+                  <span className="text-2xl font-bold text-[#166534]">₱2,000 / day</span>
                   <button className="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">View Details</button>
                 </div>
               </div>
@@ -200,12 +201,12 @@ export default function Home() {
             {/* Driver Profile 1 */}
             <div className="border border-gray-100 p-8 rounded-3xl bg-gray-50 flex flex-col items-center hover:shadow-xl transition-shadow duration-300 group">
               <div className="relative w-36 h-36 overflow-hidden rounded-full border-2 border-white shadow-md bg-gray-100 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-200">
-                <Image src="/driver-manny.jpg" alt="Manny Cruz" fill sizes="144px" className="object-cover" />
+                <Image src="/driver-manny.jpg" alt="Bonie Galvez" fill sizes="144px" className="object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-gray-950 mb-1 tracking-tight">Manny Cruz</h3>
+              <h3 className="text-xl font-bold text-gray-950 mb-1 tracking-tight">Bonie Galvez</h3>
               <p className="text-sm text-[#166534] font-semibold mb-4 tracking-wide uppercase group-hover:text-[#1d4ed8] transition-colors">Mindanao Route Specialist</p>
               <p className="text-gray-600 text-sm text-center leading-relaxed max-w-sm mb-6 flex-grow">
-                With over 10 years of accident-free professional driving across Mindanao, Manny is known for meticulous route knowledge and exceptional passenger safety.
+                With over 10 years of accident-free professional driving across Mindanao, Bonie is known for meticulous route knowledge and exceptional passenger safety.
               </p>
               <a 
                 href="https://m.me/MANNY_USERNAME_HERE" 
@@ -213,7 +214,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="w-full bg-[#0084FF] text-white px-4 py-3 rounded-xl text-sm font-bold flex justify-center items-center gap-2 hover:bg-[#0072dc] transition-colors shadow-sm"
               >
-                <span>⚡</span> Chat with Manny
+                <span>⚡</span> Chat with Bonie
               </a>
             </div>
             
