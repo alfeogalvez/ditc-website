@@ -8,28 +8,30 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans scroll-smooth">
       
-      {/* 1. PROFESSIONAL HEADER / NAVIGATION (1.5x SIZE & FIXED ALIGNMENT) */}
-      <header className="bg-white border-b sticky top-0 z-50 shadow-sm backdrop-blur-md bg-white/95">
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+      {/* 1. PROFESSIONAL HEADER / NAVIGATION (MOBILE OPTIMIZED) */}
+      <header className="bg-white border-b sticky top-0 z-[100] shadow-sm backdrop-blur-md bg-white/95">
+        <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
           
           {/* Logo & Stylized Name Container */}
-          <div className="flex items-center gap-3 sm:gap-5 shrink-0">
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 overflow-hidden rounded-full border border-gray-100 shadow-sm bg-gray-50 flex items-center justify-center">
+          <div className="flex items-center gap-2 sm:gap-5 min-w-0">
+            {/* The DITC Logo */}
+            <div className="relative w-12 h-12 sm:w-20 sm:h-20 shrink-0 overflow-hidden rounded-full border border-gray-100 shadow-sm bg-gray-50 flex items-center justify-center">
               <Image 
                 src="/logo.jpg" 
                 alt="DITC Davao International Transport Cooperative Logo" 
                 fill
-                sizes="80px"
+                sizes="(max-width: 640px) 48px, 80px"
                 className="object-cover"
                 priority
               />
             </div>
             
-            <div className="flex flex-col justify-center">
-              <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#166534] to-[#1d4ed8] tracking-tighter drop-shadow-sm leading-none">
+            {/* Stylized Company Typography */}
+            <div className="flex flex-col justify-center min-w-0">
+              <span className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#166534] to-[#1d4ed8] tracking-tighter drop-shadow-sm leading-none truncate">
                 DITC
               </span>
-              <span className="text-[9px] sm:text-[11px] lg:text-xs font-bold text-gray-500 uppercase tracking-widest mt-1 max-w-[180px] sm:max-w-[250px] leading-tight">
+              <span className="text-[8px] sm:text-[11px] lg:text-xs font-bold text-gray-500 uppercase tracking-widest mt-0.5 sm:mt-1 truncate max-w-[140px] sm:max-w-[250px] leading-tight">
                 Davao International Transport Cooperative
               </span>
             </div>
@@ -52,14 +54,15 @@ export default function Home() {
                   0912 345 6789
                 </a>
             </div>
-            <button className="bg-gradient-to-r from-[#166534] to-[#14532d] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-full text-sm font-bold hover:shadow-lg hover:scale-105 transition-all duration-200">
+            {/* HIDDEN ON MOBILE: Book Now Button */}
+            <button className="hidden sm:block bg-gradient-to-r from-[#166534] to-[#14532d] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-full text-sm font-bold hover:shadow-lg hover:scale-105 transition-all duration-200">
               Book Now
             </button>
             
-            {/* Hamburger Button (Visible only on mobile/tablet) */}
+            {/* Hamburger Button (Always visible on mobile) */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden text-2xl text-gray-800 p-2 focus:outline-none"
+              className="lg:hidden text-3xl text-gray-800 p-1 focus:outline-none"
               aria-label="Toggle Menu"
             >
               {isMobileMenuOpen ? '✖' : '☰'}
@@ -69,16 +72,19 @@ export default function Home() {
 
         {/* Mobile Dropdown Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b shadow-lg py-4 px-6 flex flex-col gap-4 text-base font-bold text-gray-800">
-            <a href="#fleet" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534]">Our Fleet</a>
-            <a href="#drivers" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534]">Our Drivers</a>
-            <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534]">Why DITC?</a>
-            <a href="#requirements" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534]">Requirements</a>
-            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534]">Contact Us</a>
-            <hr className="border-gray-100" />
-            <div className="flex flex-col">
-              <span className="text-xs text-gray-500 uppercase tracking-wider">Hotline</span>
-              <a href="tel:09123456789" className="text-lg text-[#166534]">0912 345 6789</a>
+          <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b shadow-2xl py-6 px-6 flex flex-col gap-5 text-base font-bold text-gray-800">
+            <button className="w-full bg-[#166534] text-white py-3 rounded-xl text-lg mb-2 shadow-sm">
+              Book a Vehicle Now
+            </button>
+            <a href="#fleet" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534] flex items-center justify-between border-b pb-3">Our Fleet <span>→</span></a>
+            <a href="#drivers" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534] flex items-center justify-between border-b pb-3">Our Drivers <span>→</span></a>
+            <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534] flex items-center justify-between border-b pb-3">Why DITC? <span>→</span></a>
+            <a href="#requirements" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534] flex items-center justify-between border-b pb-3">Requirements <span>→</span></a>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#166534] flex items-center justify-between">Contact Us <span>→</span></a>
+            
+            <div className="flex flex-col mt-4 bg-gray-50 p-4 rounded-xl border">
+              <span className="text-xs text-gray-500 uppercase tracking-wider mb-1">Direct Hotline</span>
+              <a href="tel:09123456789" className="text-xl text-[#166534] font-black">0912 345 6789</a>
             </div>
           </div>
         )}
@@ -359,7 +365,7 @@ export default function Home() {
       </section>
 
       {/* 8. FOOTER */}
-      <footer className="bg-gray-950 text-gray-400 py-16 px-6">
+      <footer className="bg-gray-950 text-gray-400 py-16 px-6 pb-24 sm:pb-16">
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-sm leading-relaxed">
           <div className="col-span-2 md:col-span-1">
             <span className="text-2xl font-bold text-white tracking-tight">DITC</span>
@@ -397,7 +403,7 @@ export default function Home() {
       {/* RESPONSIVE FLOATING 24/7 CHAT SUPPORT BUTTON */}
       <button 
         aria-label="Open 24/7 Chat Support"
-        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-gradient-to-r from-[#166534] to-[#14532d] text-white p-4 sm:px-6 sm:py-4 rounded-full shadow-[0_10px_25px_rgba(22,101,52,0.4)] sm:text-lg font-bold hover:scale-105 active:scale-95 transition-all z-50 flex items-center justify-center gap-0 sm:gap-3 animate-bounce cursor-pointer border-2 border-white"
+        className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 bg-gradient-to-r from-[#166534] to-[#14532d] text-white p-4 sm:px-6 sm:py-4 rounded-full shadow-[0_10px_25px_rgba(22,101,52,0.4)] sm:text-lg font-bold hover:scale-105 active:scale-95 transition-all z-[999] flex items-center justify-center gap-0 sm:gap-3 cursor-pointer border-2 border-white"
       >
         <span className="text-2xl drop-shadow-md">💬</span>
         <span className="hidden sm:inline tracking-wide">24/7 Chat Support</span>
